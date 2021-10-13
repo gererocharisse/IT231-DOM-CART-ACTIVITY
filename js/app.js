@@ -55,7 +55,7 @@ function addIntoCart(course) {
            <td>
                <a href="#" class="remove" data-id="${course.id}">X</a>
        </tr>
-    
+      
     `;
 
       shoppingCartContent.appendChild(row);
