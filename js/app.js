@@ -1,11 +1,10 @@
-// variables
+
 
 const courses = document.querySelector('#courses-list'),
       shoppingCartContent = document.querySelector('#cart-content tbody');
 
 
 
-// listeners
 
 loadEventListeners();
 
@@ -15,7 +14,6 @@ function loadEventListeners() {
 }
 
 
-// functions
 
 function buyCourse(e) {
     e.preventDefault();
@@ -60,8 +58,38 @@ function addIntoCart(course) {
 
       shoppingCartContent.appendChild(row);
 
+      saveIntoStorage(course);
+}
+
+
+function saveIntoStorage(course) {
+    let courses = getCoursesFromStorage();
+
+
+    courses.push(course);
+
+    localStorage.setItem('courses', JSON.stringify(courses));
 
 }
+
+function getCoursesFromStorage() {
+
+    let courses;
+
+    if(localStorage.getItem('courses') === null) {
+        courses = [];
+    } else {
+        course = JSON.parse(localStorage.getItem('courses') );
+    }
+    return courses;
+
+
+}
+
+
+
+
+
 
 
 
