@@ -4,7 +4,6 @@ const courses = document.querySelector('#courses-list'),
 
 
 
-
 loadEventListeners();
 
 function loadEventListeners() {
