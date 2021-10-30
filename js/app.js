@@ -172,3 +172,5 @@ function getFromLocalStorage() {
         shoppingCartContent.appendChild(row);
     });
 }
+
+
